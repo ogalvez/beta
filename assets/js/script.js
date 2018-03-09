@@ -17,6 +17,11 @@
 });
 
 
+function mostrarAltaPlaza(){
+	$('#contenidoPrincipal').empty();
+	$('#contenidoPrincipal').load("views/alta_plaza.html");
+}
+
 function validarVacios(){
 
 	
