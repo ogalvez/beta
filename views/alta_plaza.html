@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<title>Forma alta de Plazas</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+	<script type="text/javascript" src="../assets/js/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="../assets/js/script.js"></script>
+	<link rel="stylesheet" href="../assets/css/foundation.css">
+	<link rel="stylesheet" href="../assets/css/app.css">
+</head>
+<body>
+	<div class="grid-container">
+		<div class="grid-x grid-padding-x text-center">
+			<div class="large-12 cell ">
+				<h1>PrototipoPrototipoPrototipo </h1>
+			</div>
+			<div class="large-12 cell ">
+				<h3>Alta de Plaza</h3>
+			</div>
+		</div>
+		<div class="grid-x grid-padding-x" id="contenedorForma">
+			<div class="large-12 cell">
+				<form id="formaAltaPlaza" > 
+					<div class="grid-x">  	
+						<div class="large-12 cell">
+							<label for="idPlaza">ID Plaza</label>
+						</div>
+						<div class="large-8 cell">
+							<input placeholder="ID Plaza" type="text" name="idPlaza" id="idPlaza" />
+						</div>
+						<div class="large-4 cell text-center">
+							<span id="errorIDPlaza" ></span>
+						</div>
+					</div>	
+					<label for="nombrePlaza">Nombre de la plaza</label>
+					<input placeholder="Nombre de la Plaza" type="text" name="nombrePlaza" id="nombrePlaza" />
+					<label for="descripcionPlaza">Descripcion Plaza</label>
+					<input placeholder="Descripcion de la plaza" type="text" name="descripcionPlaza" id="descripcionPlaza" />
+					<label for="ciudadPlaza">Ciudad</label>
+					<input placeholder="Ciudad" type="text" name="ciudadPlaza" id="ciudadPlaza" />
+					<label for="estadoPlaza">Estado Plaza</label>
+					<select name="estadoPlaza">
+						<option value="">Selecciona Estado...</option>
+						<option value="Aguascalientes">Aguascalientes</option>
+						<option value="Baja California">Baja California</option>
+						<option value="Baja California Sur">Baja California Sur</option>
+						<option value="Campeche">Campeche</option>
+						<option value="Coahuila">Coahuila de Zaragoza</option>
+						<option value="Colima">Colima</option>
+						<option value="Chiapas">Chiapas</option>
+						<option value="Chihuahua">Chihuahua</option>
+						<option value="DF">Distrito Federal</option>
+						<option value="Durango">Durango</option>
+						<option value="Guanajuato">Guanajuato</option>
+						<option value="Guerrero">Guerrero</option>
+						<option value="Hidalgo">Hidalgo</option>
+						<option value="Jalisco">Jalisco</option>
+						<option value="México">México</option>
+						<option value="Michoacán">Michoacán de Ocampo</option>
+						<option value="Morelos">Morelos</option>
+						<option value="Nayarit">Nayarit</option>
+						<option value="Nuevo Leon">Nuevo León</option>
+						<option value="Oaxaca">Oaxaca</option>
+						<option value="Puebla">Puebla</option>
+						<option value="Querétaro">Querétaro</option>
+						<option value="Quintana Roo">Quintana Roo</option>
+						<option value="San Luis Potosí">San Luis Potosí</option>
+						<option value="Sinaloa">Sinaloa</option>
+						<option value="Sonora">Sonora</option>
+						<option value="Tabasco">Tabasco</option>
+						<option value="Tamaulipas">Tamaulipas</option>
+						<option value="Tlaxcala">Tlaxcala</option>
+						<option value="Veracruz">Veracruz</option>
+						<option value="Yucatán">Yucatán</option>
+						<option value="Zacatecas">Zacatecas</option>
+					</select> 
+					<button class="button" onclick="enviarForma(); return false" > Enviar </button>	
+					<button class="button" type="reset" value="Reset">Borrar Campos</button>		
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<script src="../assets/js/vendor/jquery.js"></script>
+<script src="../assets/js/vendor/what-input.js"></script>
+<script src="../assets/js/vendor/foundation.js"></script>
+<script src="../assets/js/app.js"></script>
+<script>
+
+</script>
+
+</body>
+
+
+</html>
