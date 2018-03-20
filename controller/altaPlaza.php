@@ -21,9 +21,4 @@ include "PDOHandler.php";
 					echo json_encode($prepareStatement->errorInfo());
 				}
 
-
-
-
-
-
 ?>

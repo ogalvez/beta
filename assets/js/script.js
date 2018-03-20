@@ -1,5 +1,7 @@
-	$( document ).ready(function() {
-    	$("#idPlaza").keydown(function (e) {
+function mostrarAltaPlaza(){
+	$('#contenidoPrincipal').empty();
+	$('#contenidoPrincipal').load("views/alta_plaza.html", function(){
+		$("#idPlaza").keydown(function (e) {
         // Allow: backspace, delete, tab, escape, enter and .
         if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
              // Allow: Ctrl+A, Command+A
@@ -14,19 +16,15 @@
             e.preventDefault();
         }
     });
-});
+	});
 
+}
 
-function mostrarAltaPlaza(){
-	$('#contenidoPrincipal').empty();
-	$('#contenidoPrincipal').load("views/alta_plaza.html");
+function cerrarVentana(){
+	$("#mensajesInformacion").fadeOut("fast");
 }
 
 function validarVacios(){
-
-	
-
-
 	var x = $("#formaAltaPlaza")[0].length ; 
 	var vacios = 0;
 	for (var i= 0 ; i < x-2 ; i++){
@@ -47,25 +45,31 @@ function validarVacios(){
 }
 
 
+function mostarMensajeInformacion(){
+	$("#mensajesInformacion").html("Plaza dada de alta con exito");
+	$("#mensajesInformacion").fadeIn("slow");
+}
+
 
 function enviarForma(){
 	
 	var vacios = validarVacios();
 	if(vacios === true) {
 		var formaPlaza = new FormData($('#formaAltaPlaza')[0]); 
-		alert(formaPlaza);
 		
 		$.ajax({
 			type: "POST",
 			async:true,
-			url:"../controller/altaPlaza.php",
+			url:"controller/altaPlaza.php",
 			
 			success:function(data){
-				alert(data);
 				var x = $("#formaAltaPlaza")[0].length;
+				mostarMensajeInformacion();
 				for(var i = 0 ; i < x-1 ; i++){
 					$("#formaAltaPlaza")[0][i].value = "";
 				}
+
+				
 
 			},
 			error:function(request,status,error){
@@ -85,3 +89,5 @@ function enviarForma(){
 	}
 
 }
+
+
